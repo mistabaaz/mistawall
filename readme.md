@@ -1,3 +1,5 @@
+A command line utility for applying random wallpaper to your os
+
 # Requirements
 Desktop : Nothing just run `mistawall.exe` (Windows)
 
@@ -9,24 +11,88 @@ Android : hmm, this requires a bit more work
 - also the termux-api package in termux 
 - by running following command in terminal (termux) `pkg install termux-api`
 
+<details>
+<summary> Click here for detailed android guide</summary> <br>
+
+1. Install Termux:API app from F-Droid (link below)
+
+```https://f-droid.org/repo/com.termux.api_51.apk```
+
+2. Install Termux app from F-Droid (link below)
+
+```https://f-droid.org/repo/com.termux_118.apk```
+
+3. Now Open `Termux` and run following commands
+
+```pkg update && pkg upgrade```
+
+4. install wget to download mistawall script
+
+```pkg install wget```
+
+5. Now run below command to download mistawall (in termux)
+
+```wget "https://github.com/mistabaaz/mistawall/raw/master/android.sh" && bash android.sh```
+
+6. Now you can run mistawall on android
+
+```./mistawall```
+
+or with some arguments
+
+```./mistawall --offline --foldername "hello" ```
+
+</details>
+
 # Installation
 
 ## From binaries
-| Opreating System       | Download Link | Tested         | 
-| :----------------------| :-----------: | :------------: |
-| windows 32bit (x86)    | [Download]()  | ✅ bY mista   |
-| windows 64bit (x86_64) | [Download]()  | ❌            |
-| linux 32bit (x86)      | [Download]()  | ❌            |
-| linux 64bit (x86_64)   | [Download]()  | ✅ by nexus   |
-| android 32bit (arm)    | [Download]()  | ✅ bY mista   |
-| android 64bit (arm64)  | [Download]()  | ✅ bY mista   |
-| macOS                  | [Download]()  | ❌            |
+
+[1]: https://github.com/mistabaaz/mistawall/releases/download/1.0/mistawall_windows_x86.exe
+[2]: https://github.com/mistabaaz/mistawall/releases/download/1.0/mistawall_linux_arm64.bin
+[3]: https://github.com/mistabaaz/mistawall/archive/refs/tags/1.0.zip
+
+| Opreating System       | Download Link         | Tested         | 
+| :----------------------| :-------------------: | :------------: |
+| windows 32bit (x86)    | [Download][1]         | ✅ bY mista   |
+| windows 64bit (x86_64) | [Run from Source][3]  | ❌            |
+| linux 32bit (x86)      | [Run from Source][3]  | ❌            |
+| linux 64bit (x86_64)   | [Run from Source][3]  | ❔             |
+| android 32bit (arm)    | [Run from Source][3]  | ❌            |
+| android 64bit (arm64)  | [Download][2]         | ✅ bY mista   |
+| macOS                  | [Run from Source][3]  | ❌            |
+
+### Linux Testing
+| Desktop Enviornment    | Tested           | architecture |
+| :----------------------| :--------------: | :----------: |
+| kde                    |  ❌              | ❌          |
+| gnome                  |  ❌              | ❌          |
+| xfce                   |  ❌              | ❌          |
+| mate                   |  ❌              | ❌          |
+| lxde                   |  ✅ by nexus     | x86_64      |
+| other de               |  Not implemented | ❌          |
+        
 
 
 ## From Source
 
 1. Make sure you have python installed
 2. now just run `mistawall.py` and all set!
+
+# Demo
+<details>
+<summary> Windows </summary> 
+
+![windows](https://github.com/mistabaaz/mistawall/blob/master/demo/windows.gif)
+
+</details>
+
+<details>
+<summary> Android </summary> 
+
+![android](https://github.com/mistabaaz/mistawall/blob/master/demo/android.gif)
+
+</details>
 
 # Features
 
@@ -125,8 +191,28 @@ Nothing is prefect :) this program also have some limitations
 - Android program does not work without having termux and its api *[no workaround till now as accessing android apis requires a android app and i could not make a standalone app right now as i don't know android dev, will learn it soon :) ]*
 - Also i don't think making an android/ios app is a good idea for a just random wallpaper setter it is good if only used as CLI 
 - On Linux this uses some system commands that may not be availible to all users and also i could not able to add all desktop enviornment support till now *[it will take time]*
+- cannot get current wallpaper on android *[as termux-api only supports to set wallpaper]*
 
 **Only works better in windows (now i think why many people use windows )**
+
+# TODO
+
+<details>
+<summary> Code Refactoring </summary>
+
+    [] by using classes instead of functions
+    [] adding comments for good readability
+
+</details>
+
+### Features Implementation
+
+[x] get current wallpaper  <br>
+[] colored logging <br>
+[] retries for downloading an image <br>
+[] concurrent downloading for offline images <br>
+[] adding support for other linux de <br>
+
 
 # Credits
 
