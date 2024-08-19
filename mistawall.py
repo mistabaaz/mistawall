@@ -563,11 +563,16 @@ def setWallpaper_android(img_path: str) -> bool:
 
         elif (not (termux_api_pkg_path)) and ("TERMUX_VERSION" in os.environ) :
             try:
-                new_logger.info(f"termux api installing")
-                command = ["pkg","install","termux-api"]
-                subprocess.run(command,check=True)
-                new_logger.info(f"termux api installed successfully")
-                return False
+                new_logger.info(f"termux-api package not installed")
+                ans = input("do you want to install termux-api(y/n): ")
+
+                if (ans.lower() == "y"):
+
+                    new_logger.info(f"termux api installing")
+                    command = ["pkg","install","termux-api"]
+                    subprocess.run(command,check=True)
+                    new_logger.info(f"termux api installed successfully")
+                    return False
 
                 
             except:

@@ -26,9 +26,9 @@ https://f-droid.org/repo/com.termux_118.apk
 ```
 pkg update && pkg upgrade
 ```
-4. install wget to download mistawall script
+4. install wget to download mistawall script and termux-api
 ```
-pkg install wget
+pkg install wget,termux-api
 ```
 6. Now run below command to download mistawall (in termux)
 ```
@@ -68,8 +68,8 @@ or with some arguments
 | kde                    |  ❌              | ❌          |
 | gnome                  |  ❌              | ❌          |
 | xfce                   |  ❌              | ❌          |
-| mate                   |  ❌              | ❌          |
-| lxde                   |  ✅ by nexus     | x86_64      |
+| lxde                   |  ❌              | ❌          |
+| mate                   |  ✅ by nexus     | x86_64      |
 | other de               |  Not implemented | ❌          |
         
 
@@ -209,11 +209,17 @@ Nothing is prefect :) this program also have some limitations
 
 ### Features Implementation
 
+there are too many features that can be added but i don't have time to implement them *[or you can say i am lazy to add that features]* anyway feel free to suggest any new feature i will try to add it.
+
 - [x] get current wallpaper  <br>
+- [ ] set lockscreen wallpaper <br>
+- [ ] add other sources for random wallpapers <br>
+- [ ] category flag for applying specific category random wallpaper <br>
+- [ ] user specified offlines wallpaper directory <br>
+- [ ] adding support for other linux de <br>
 - [ ] colored logging <br>
 - [ ] retries for downloading an image <br>
 - [ ] concurrent downloading for offline images <br>
-- [ ] adding support for other linux de <br>
 
 
 # Credits
