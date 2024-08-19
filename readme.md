@@ -15,33 +15,33 @@ Android : hmm, this requires a bit more work
 <summary> Click here for detailed android guide</summary> <br>
 
 1. Install Termux:API app from F-Droid (link below)
-
-```https://f-droid.org/repo/com.termux.api_51.apk```
-
+```
+https://f-droid.org/repo/com.termux.api_51.apk
+```
 2. Install Termux app from F-Droid (link below)
-
-```https://f-droid.org/repo/com.termux_118.apk```
-
-3. Now Open `Termux` and run following commands
-
-```pkg update && pkg upgrade```
-
+```
+https://f-droid.org/repo/com.termux_118.apk
+```
+4. Now Open `Termux` and run following commands
+```
+pkg update && pkg upgrade
+```
 4. install wget to download mistawall script
-
-```pkg install wget```
-
-5. Now run below command to download mistawall (in termux)
-
-```wget "https://github.com/mistabaaz/mistawall/raw/master/android.sh" && bash android.sh```
-
+```
+pkg install wget
+```
+6. Now run below command to download mistawall (in termux)
+```
+wget "https://github.com/mistabaaz/mistawall/raw/master/android.sh" && bash android.sh
+```
 6. Now you can run mistawall on android
-
-```./mistawall```
-
+```
+./mistawall
+```
 or with some arguments
-
-```./mistawall --offline --foldername "hello" ```
-
+```
+./mistawall --offline --foldername "hello"
+```
 </details>
 
 # Installation
@@ -82,13 +82,15 @@ or with some arguments
 # Demo
 <details>
 <summary> Windows </summary> 
-
+loading gif will take some time (wait) it is about 10mb
+        
 ![windows](https://github.com/mistabaaz/mistawall/blob/master/demo/windows.gif)
 
 </details>
 
 <details>
 <summary> Android </summary> 
+loading gif will take some time (wait) it is about 10mb
 
 ![android](https://github.com/mistabaaz/mistawall/blob/master/demo/android.gif)
 
@@ -200,18 +202,18 @@ Nothing is prefect :) this program also have some limitations
 <details>
 <summary> Code Refactoring </summary>
 
-    [] by using classes instead of functions
-    [] adding comments for good readability
+    - [ ] by using classes instead of functions
+    - [ ] adding comments for good readability
 
 </details>
 
 ### Features Implementation
 
-[x] get current wallpaper  <br>
-[] colored logging <br>
-[] retries for downloading an image <br>
-[] concurrent downloading for offline images <br>
-[] adding support for other linux de <br>
+- [x] get current wallpaper  <br>
+- [ ] colored logging <br>
+- [ ] retries for downloading an image <br>
+- [ ] concurrent downloading for offline images <br>
+- [ ] adding support for other linux de <br>
 
 
 # Credits
